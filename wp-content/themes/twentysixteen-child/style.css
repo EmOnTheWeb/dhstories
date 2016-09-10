@@ -33,6 +33,7 @@
 #masthead {
 
 	background-color:darkgreen;
+	margin-bottom:38px;
 }
 
 .site-title {
@@ -40,8 +41,48 @@
 	font-size: 40px; 
 }
 
+.site-branding {
+
+	position: relative; 
+	top:7px; 
+}
+
 .site-branding .site-title a {
 
 	color:white; 
+	font-weight:400; 
 }
+
+.site-branding .site-title a:hover, .site-branding .site-title a:focus {
+
+	color:gray; 
+}
+
+.header-image img {
+
+	width:100%; 
+}
+
+
+
+.latestPostsContainer {
+
+	margin: 30px 0; 
+	list-style: none;
+	width:50%; 
+}
+
+.latestPostsContainer li{
+
+	border-bottom: 1px solid gray;
+	padding: 5px 0; 
+}
+
+.latestPostsContainer a {
+
+	color: black;
+}
+
+
+
 

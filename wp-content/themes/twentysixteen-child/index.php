@@ -22,7 +22,7 @@ get_header(); ?>
 			<?php 
 
 				foreach($categories as $category) {
-
+					
 					 $category_link = sprintf( '<a href="%1$s" alt="%2$s">%3$s</a>',
 			        esc_url( get_category_link( $category->term_id ) ),
 			        esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ),
@@ -31,7 +31,19 @@ get_header(); ?>
      
 				    echo "<p class = 'categoryLinkAndCount'>" . sprintf( esc_html__( '%s', 'textdomain' ), $category_link ) ."<span class = 'post_count'> (". sprintf( esc_html__( '%s', 'textdomain' ), $category->count ) . ")</span></p>";
 
+				    //get five post titles and display
 
+				    $args = array( 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => 3, 'category' => $category->term_id); 
+				    $posts = get_posts($args); 
+
+				    // var_dump($posts); 
+
+				    echo "<ul class = 'latestPostsContainer'>";
+					    foreach ($posts as $post) {
+					    	$link = esc_url(get_permalink()); 
+					    	echo "<li><a href=".$link.">" . $post->post_title . "</a></li>"; 
+					    }
+					echo "</ul>";
 				}
 
 			?>

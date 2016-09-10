@@ -72,7 +72,7 @@
 				<?php endif; ?>
 
 				<div class="header-image">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/digihitch-sm.jpg" alt = 'digihitch logo' width = "250px" />
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/digihitch-sm.jpg" alt = 'digihitch logo' />
 				</div><!-- .header-image -->
 			</div><!-- .site-header-main -->
 

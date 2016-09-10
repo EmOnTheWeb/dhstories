@@ -11,4 +11,18 @@ function my_theme_enqueue_styles() {
     );
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+
+
+/**
+ * Filter the except length to 20 characters.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 35;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
 ?>
