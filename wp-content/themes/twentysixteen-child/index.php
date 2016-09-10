@@ -28,9 +28,7 @@ get_header(); ?>
 			        esc_html( $category->name )
     				);
      
-				    echo '<p>' . sprintf( esc_html__( 'Category: %s', 'textdomain' ), $category_link ) . '</p> ';
-				  
-				    echo '<p>' . sprintf( esc_html__( 'Post Count: %s', 'textdomain' ), $category->count ) . '</p>';
+				    echo "<p class = 'categoryLinkAndCount'>" . sprintf( esc_html__( '%s', 'textdomain' ), $category_link ) ."<span class = 'post_count'> (". sprintf( esc_html__( '%s', 'textdomain' ), $category->count ) . ")</span></p>";
 
 
 				}
