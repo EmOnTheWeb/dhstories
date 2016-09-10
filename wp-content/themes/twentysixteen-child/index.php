@@ -16,8 +16,9 @@
 get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			
+			<section id="storiesByCountry">
 			<?php $categories = get_categories('orderby=count&order=DESC');  ?> 
-
 			<?php 
 
 				foreach($categories as $category) {
@@ -34,7 +35,18 @@ get_header(); ?>
 				}
 
 			?>
+			</section>
+			<section id="storiesByAuthor">
 
+
+
+
+
+
+
+
+
+			</section>
 		</main><!-- .site-main -->
 	</div><!-- .content-area -->
 
