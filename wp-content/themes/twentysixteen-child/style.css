@@ -10,6 +10,10 @@
  Text Domain:  twenty-sixteen-child
 */
 
+body {
+
+	/*font-family: Arial, Helvetica, sans-serif;*/
+}
 
 .categoryLinkAndCount {
 
@@ -22,6 +26,7 @@
 	color:darkgreen;
 	font-weight:bold; 
 	font-size:36px;
+	font-family: georgia,times,serif;
 }
 
 .categoryLinkAndCount a:hover {
@@ -44,6 +49,7 @@
 .site-title {
 
 	font-size: 40px; 
+	font-family: georgia,times,serif;
 }
 
 .site-branding {
@@ -120,6 +126,7 @@
 .page-title {
 
 	text-transform: uppercase; 
+	font-family:georgia,times,serif;
 }
 
 select {
