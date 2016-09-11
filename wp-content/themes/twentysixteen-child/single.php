@@ -22,21 +22,26 @@ get_header(); ?>
 			// if ( comments_open() || get_comments_number() ) {
 			// 	comments_template();
 			// }
-
 			if ( is_singular( 'attachment' ) ) {
 				// Parent post navigation.
 				the_post_navigation( array(
 					'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'twentysixteen' ),
 				) );
 			} elseif ( is_singular( 'post' ) ) {
+
+				// $post_categories = wp_get_post_categories( $post->id);
+
+				$categories = get_the_category(); 
+
 				// Previous/next post navigation.
 				the_post_navigation( array(
-					'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentysixteen' ) . '</span> ' .
+					'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next in '.$categories[0]->name, 'twentysixteen' ) . '</span> ' .
 						'<span class="screen-reader-text">' . __( 'Next post:', 'twentysixteen' ) . '</span> ' .
 						'<span class="post-title">%title</span>',
-					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentysixteen' ) . '</span> ' .
+					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous in '.$categories[0]->name, 'twentysixteen' ) . '</span> ' .
 						'<span class="screen-reader-text">' . __( 'Previous post:', 'twentysixteen' ) . '</span> ' .
 						'<span class="post-title">%title</span>',
+					'in_same_term' => true,
 				) );
 			}
 
