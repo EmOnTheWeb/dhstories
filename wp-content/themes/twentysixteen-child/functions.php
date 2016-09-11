@@ -49,9 +49,23 @@ function twentysixteen_entry_meta() {
 			esc_url( get_post_format_link( $format ) ),
 			get_post_format_string( $format )
 		);
-	}
+	}	
 	
 }
+
+//customize author and monthly archive titles 
+add_filter('get_the_archive_title', function ($title) {
+
+	$title = preg_replace('/^\w+: /', '', $title);
+	
+	if ( is_author() ) {
+        $title = 'Stories by '.$title; 
+  	}elseif ( is_month() ) {
+        $title = 'Stories from '.$title; 
+    } 
+
+    return $title; 
+});
 
 
 

@@ -122,4 +122,9 @@
 	text-transform: uppercase; 
 }
 
+select {
+
+	width: 200px;
+}
+
 
