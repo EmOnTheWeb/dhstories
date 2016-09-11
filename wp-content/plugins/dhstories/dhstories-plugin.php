@@ -168,6 +168,5 @@ class WP_Widget_Author extends WP_Widget {
 add_action( 'widgets_init', function(){
 	register_widget( 'WP_Widget_Author' );
 });
-var_dump($dropdown_args); 
 
 ?>
