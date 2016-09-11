@@ -24,6 +24,11 @@
 	font-size:36px;
 }
 
+.categoryLinkAndCount a:hover {
+
+	color:#007acc; 
+}
+
 .site-header {
 
 	padding-bottom:0; 
@@ -66,9 +71,9 @@
 
 .latestPostsContainer {
 
-	margin: 30px 0 30px 50px; 
+	margin: 30px 50px 30px 50px; 
 	list-style: none;
-	width:50%; 
+	width: calc(100% - 100px);  
 }
 
 .latestPostsContainer li{
@@ -80,6 +85,11 @@
 .latestPostsContainer a {
 
 	color: black;
+}
+
+.latestPostsContainer a:hover {
+
+	color: #007acc; 
 }
 
 .viewAll {
