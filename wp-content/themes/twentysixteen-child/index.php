@@ -43,6 +43,10 @@ get_header(); ?>
 					    	$link = esc_url(get_permalink());  
 					    	echo "<li><a href=".$link.">" . $post->post_title . "</a></li>"; 
 					    }
+				?>
+					    <li><a class = 'viewAll' href="<?php echo esc_url(get_category_link($category->term_id)); ?>">View all</a></li>
+
+				<?php 
 					echo "</ul>";
 				}
 
