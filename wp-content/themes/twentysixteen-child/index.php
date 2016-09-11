@@ -29,7 +29,7 @@ get_header(); ?>
 			        esc_html( $category->name )
     				);
      
-				    echo "<p class = 'categoryLinkAndCount'>" . sprintf( esc_html__( '%s', 'textdomain' ), $category_link ) ."<span class = 'post_count'> (". sprintf( esc_html__( '%s', 'textdomain' ), $category->count ) . ")</span></p>";
+				    echo "<p class = 'categoryLinkAndCount'>" . sprintf( esc_html__( '%s', 'textdomain' ), $category_link ) ."<span class = 'post_count'> (". sprintf( esc_html__( '%s', 'textdomain' ), $category->count ) . " stories)</span></p>";
 
 				    //get five post titles and display
 
@@ -40,7 +40,7 @@ get_header(); ?>
 
 				    echo "<ul class = 'latestPostsContainer'>";
 					    foreach ($posts as $post) {
-					    	$link = esc_url(get_permalink()); 
+					    	$link = esc_url(get_permalink());  
 					    	echo "<li><a href=".$link.">" . $post->post_title . "</a></li>"; 
 					    }
 					echo "</ul>";
