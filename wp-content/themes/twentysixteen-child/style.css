@@ -33,7 +33,7 @@
 #masthead {
 
 	background-color:darkgreen;
-	margin-bottom:38px;
+	margin-bottom:55px;
 }
 
 .site-title {
@@ -67,7 +67,7 @@
 
 .latestPostsContainer {
 
-	margin: 30px 0; 
+	margin: 30px 0 30px 50px; 
 	list-style: none;
 	width:50%; 
 }
