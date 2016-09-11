@@ -53,10 +53,10 @@
 	font-weight:400; 
 }
 
-.site-branding .site-title a:hover, .site-branding .site-title a:focus {
+/*.site-branding .site-title a:hover, .site-branding .site-title a:focus {
 
-	color:gray; 
-}
+	color:#007acc; 
+}*/
 
 .header-image img {
 
@@ -95,6 +95,21 @@
     text-rendering: optimizeLegibility;
 
     margin-left: calc(100% - 90px); 
+}
+
+.entry-title {
+
+	font-size: 36px;
+}
+
+.site-main > article {
+
+	margin-bottom: 4em;
+}
+
+.page-title {
+
+	text-transform: uppercase; 
 }
 
 
