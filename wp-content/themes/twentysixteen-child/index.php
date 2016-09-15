@@ -33,7 +33,7 @@ get_header(); ?>
 
 				    //get five post titles and display
 
-				    $args = array( 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => 3, 'category' => $category->term_id); 
+				    $args = array( 'orderby' => 'date', 'order' => 'DESC', 'posts_per_page' => 6, 'category' => $category->term_id); 
 				    $posts = get_posts($args); 
 
 				    // var_dump($posts); 

@@ -52,16 +52,24 @@ body {
 	font-family: georgia,times,serif;
 }
 
-.site-branding {
+/*.site-branding {
 
 	position: relative; 
 	top:7px; 
-}
+
+}*/
 
 .site-branding .site-title a {
 
 	color:white; 
 	font-weight:400; 
+}
+
+.site-description {
+
+	font-family: georgia,times,serif;
+	color:white;
+	font-size:20px;
 }
 
 /*.site-branding .site-title a:hover, .site-branding .site-title a:focus {
@@ -89,8 +97,10 @@ body {
 }
 
 .latestPostsContainer a {
-
+	font-family: Montserrat, "Helvetica Neue", sans-serif;
 	color: black;
+	font-weight:bold;
+	font-size:22px; 
 }
 
 .latestPostsContainer a:hover {
@@ -110,7 +120,7 @@ body {
     font-weight: 700; 
     text-rendering: optimizeLegibility;
 
-    margin-left: calc(100% - 90px); 
+    margin-left: calc(100% - 128px); 
 }
 
 .entry-title {
