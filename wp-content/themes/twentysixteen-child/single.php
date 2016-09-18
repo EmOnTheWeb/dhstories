@@ -33,12 +33,17 @@ get_header(); ?>
 
 				$categories = get_the_category(); 
 
+				$firstCat = $categories[0]; 
+				$firstCatLink = get_category_link($firstCat->cat_ID); 
+
+				echo "<span class = 'backCatLinks'><a href='".$firstCatLink."'>< <  Back to ".$firstCat->name." Stories</a></span>"; 
+
 				// Previous/next post navigation.
 				the_post_navigation( array(
-					'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next in '.$categories[0]->name, 'twentysixteen' ) . '</span> ' .
+					'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next in '.$firstCat->name, 'twentysixteen' ) . '</span> ' .
 						'<span class="screen-reader-text">' . __( 'Next post:', 'twentysixteen' ) . '</span> ' .
 						'<span class="post-title">%title</span>',
-					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous in '.$categories[0]->name, 'twentysixteen' ) . '</span> ' .
+					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous in '.$firstCat->name, 'twentysixteen' ) . '</span> ' .
 						'<span class="screen-reader-text">' . __( 'Previous post:', 'twentysixteen' ) . '</span> ' .
 						'<span class="post-title">%title</span>',
 					'in_same_term' => true,
